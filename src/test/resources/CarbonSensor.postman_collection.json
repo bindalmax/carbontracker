@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "e108e94b-f0bd-42c4-9d5f-6ec460fc6d2d",
+		"name": "CarbonSensor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddSensorData",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 123,\r\n    \"carbonPPM\" : 587.9,\r\n    \"entryTime\" : \"2021-08-12T15:20:20.333\",\r\n    \"sensor\" : {\r\n        \"name\" : \"Eixample1\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/sensors",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sensors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddSensorData2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 123,\r\n    \"carbonPPM\" : 423.7,\r\n    \"entryTime\" : \"2021-08-12T15:18:30.333\",\r\n    \"sensor\" : {\r\n        \"name\" : \"Eixample1\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/sensors",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sensors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MasterData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/masters",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"masters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSensorData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cities/Barcelona/getAllSensorsData",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cities",
+						"Barcelona",
+						"getAllSensorsData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
